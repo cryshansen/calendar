@@ -1,0 +1,22 @@
+<!-- Sign Up Page start -->
+<div class="jumbotron">
+  <div id="signUpContainer" class="floatCenter">
+    <h3 class="blueText appName paddingTop20 paddingBottom10">
+    Outlook App - Sign up
+  </h3>
+    <div class="alignCenter form-horizontal">
+      <form name="signupForm" class="form-group">
+        <input ng-model="user.firstName" class="form-control" required placeholder="First Name*" />
+        <span ng-show="loginForm.userName.$touched && loginForm.userName.$invalid">The username is required.</span>
+        <input ng-model="user.lastName" class="form-control" required placeholder="Last Name*" />
+        <input ng-model="user.userId" class="form-control" required placeholder="Employee ID*" />
+         <input ng-model="user.password" required class="form-control" type="password" placeholder="password*" />
+      </form>
+      <div class="marginTop20">
+        <div class="btn btn-primary btn-raised" ui-sref="signin">Cancel</div>
+        <div class="btn btn-primary btn-raised" ng-click="DoRegisterUser(user)">Submit</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Sign Up Page End -->

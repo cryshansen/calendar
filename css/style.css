@@ -1,0 +1,50 @@
+/* Styles go here */
+
+a {
+  cursor: pointer;
+}
+
+.marginLeft20 {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.marginTop20 {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+input[disabled="disabled"] {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.fullview{width:60%;}

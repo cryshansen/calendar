@@ -1,0 +1,57 @@
+
+--
+-- Database: `apothecary`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookingEvent`
+--
+
+CREATE TABLE `bookingEvent` (
+  `bookingId` int(6) NOT NULL,
+  `bookingstart` timestamp NULL DEFAULT NULL,
+  `bookingend` timestamp NULL DEFAULT NULL,
+  `bookingHourStart` varchar(10) DEFAULT '08:00:00',
+  `bookingHourEnd` varchar(10) NOT NULL DEFAULT '10:00:00',
+  `bookingTitle` varchar(10) NOT NULL DEFAULT 'Title',
+  `backgroundColor` varchar(10) DEFAULT NULL,
+  `eventStatus` varchar(10) NOT NULL DEFAULT 'Available',
+  `allDay` varchar(5) NOT NULL DEFAULT 'false',
+  `studioNumberInAttendance` int(4) DEFAULT NULL,
+  `studioId` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bookingEvent`
+--
+
+INSERT INTO `bookingEvent` (`bookingId`, `bookingstart`, `bookingend`, `bookingHourStart`, `bookingHourEnd`, `bookingTitle`, `backgroundColor`, `eventStatus`, `allDay`, `studioNumberInAttendance`, `studioId`) VALUES
+(2, '2020-06-03 20:00:00', '2020-06-03 22:00:00', '13:00:00', '15:00:00', 'White Room', '#ff8c82', 'Reserved', '', 3, 1),
+(3, '2020-07-17 01:00:00', '2020-07-17 03:00:00', '19:00:00', '21:00:00', 'White Room', '#ff8c82', 'Reserved', '', 3, 1),
+(4, '2020-06-04 19:00:00', '2020-06-04 21:00:00', '13:00:00', '15:00:00', 'White Room', '#ff8c82', 'Reserved', '', 3, 1),
+(5, '2020-07-24 01:00:00', '2020-07-25 03:00:00', '13:00:00', '15:00:00', 'White Room', '#ff8c82', 'Reserved', '', 3, 1),
+(6, '2020-07-23 12:00:00', '2020-07-23 12:00:00', '19:00:00', '21:00:00', 'White Room', '#ff8c82', 'Reserved', '', 3, 1),
+(7, '2020-07-23 12:00:00', '2020-07-23 12:00:00', '19:00:00', '21:00:00', 'White Room', '#ff8c82', 'Reserved', '', 3, 1),
+(9, '2020-06-29 06:00:00', '2020-06-29 06:00:00', '17:00:00', '19:00:00', 'Apothecary', '#cde9b5', 'Reserved', '1', 2, 4);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `bookingEvent`
+--
+ALTER TABLE `bookingEvent`
+  ADD PRIMARY KEY (`bookingId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `bookingEvent`
+--
+ALTER TABLE `bookingEvent`
+  MODIFY `bookingId` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;

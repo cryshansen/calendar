@@ -1,0 +1,100 @@
+<style>
+.col{margin:10px;}
+.col2{margin-top:5px;margin-bottom:5px;}
+</style>
+
+<div class="container" ng-controller="checkoutCtrl">
+    <div class="row">
+        <div class="page-header">
+            <h3>Checkout Studio Bookings</h3>
+        </div>
+		 
+	 	<div style="width:95%; margin-left:15px;" >
+	        	<div class="row header">
+	        	 	<div class="col col2">Shoot Start</div>
+			  		<div class="col col2">End</div>  
+			  		<div class="col col2">Price</div>
+			  		<div class="col col2">Book</div>
+			  </div>
+				<div  ng-repeat="d in bookingCart">
+				 <div class="row" ng-if="d.studio != ''">
+	   				<div class="col">{{d.start}}</div>
+				  	<div class="col">{{d.end}}</div>
+				  	<div class="col">{{d.price}}</div> 
+				  	<div class="col"> Pending</div>
+				  </div>	
+	   				
+				</div>	
+		</div>
+       <div class="container">
+      	<div class="row">
+      		<div class="col">
+      			
+      				Studio Use/Shoot Type: {{studio}} 
+			</div>
+			<div class="col">
+				<div class="form-group">
+					First Name  {{first_name}}
+				</div>	
+			</div>  
+			<div class="col"> 
+				<div class="form-group">
+					Last Name  
+					{{last_name}}
+			</div>	
+			</div>  
+			<div class="col"> 
+				<div class="form-group">Business Name 
+				<input ng-model="businessName" class="form-control" placeholder="Business Name" /></div>	
+			</div>  
+			<div class="col"> 
+				<div class="form-group">Instagram (we'll follow you and promise lots of Likes)
+				<input ng-model="insta" class="form-control" placeholder="insta" /></div>	
+			</div>  
+			<div class="col"> 
+				<div class="form-group">Cell Phone Number: *  
+					<input ng-model="cellphone" class="form-control" required placeholder="Cell No" /> </div>	
+			</div>  
+			<div class="col"> 
+				<div class="form-group">Email Address: *
+				<input ng-model="email" class="form-control" required placeholder="email" /></div>
+			</div>
+			<div class="row">
+			<div class="col-8">Credit cards
+					 Major credit cards accepted.
+					 <img src="images/pmtcrds.png" style="width:25%;">
+					<a type="button" class="btn btn-danger" href="#/card">Add a card</a>
+					
+			<div class="col"> 
+				<div class="form-group">
+					Name on card *
+					<input ng-model="cardholder_name" class="form-control" required placeholder="Cardholder Name" /></div>
+				</div>
+			</div>
+			<div class="col"> 
+				<div class="form-group">Card Number *
+				<input ng-model="card_number" class="form-control" required placeholder="card_number" /></div>
+			</div>
+			<div class="col"> 
+				<div class="form-group">ccv *
+				<input ng-model="ccv" class="form-control" required placeholder="ccv" /></div>
+			</div>
+			<div class="col"> 
+				<div class="form-group">Expiration date
+				<input ng-model="expire_date" class="form-control" required placeholder="mm/yyyy" /></div>
+			</div>
+			<div>
+
+ 			<a type="button" class="btn btn-danger" href="#/card">Add your card</a></div>
+ 			</div>
+		</div>	
+			
+
+		</div>
+    </div>
+    <div class="text-left">
+        <a type="button" class="btn btn-danger" href="#/cart">Cart <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+       <a type="button" class="btn btn-danger" href="#/pay" ng-click="validatePayment()">Book it <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+
+    </div>
+</div>

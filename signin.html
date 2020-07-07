@@ -1,0 +1,20 @@
+<!-- Login Page start -->
+<div class="jumbotron">
+  <div id="signInContainer" class="floatCenter">
+    <h3 class="blueText appName paddingTop20 paddingBottom10">
+    Outlook App
+  </h3>
+    <div class="alignCenter form-horizontal">
+      <form name="loginForm" class="form-group">
+          <input ng-model="user.userName" class="form-control" required placeholder="username" />
+          <span ng-show="loginForm.userName.$touched && loginForm.userName.$invalid">The username is required.</span>
+          <input ng-model="user.password" required class="form-control inputText marginTop20" type="password" placeholder="password" />
+          <span ng-show="loginForm.password.$touched && loginForm.password.$invalid">The password is required.</span>
+      </form> 
+      <div class="">
+        <div class="btn btn-primary btn-raised center" ui-sref="calendar">Sign In</div>
+        <div ui-sref="signUp" class="btn btn-primary btn-raised center">Sign up</div>
+      </div>
+    </div>
+  </div>
+</div>
